@@ -3,3 +3,7 @@
 @define-color label #ffffff;
 @define-color image #ffffff;
 @define-color progress #b4b47b;
+
+window {
+    border-radius: 100px;
+}
