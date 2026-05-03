@@ -4,7 +4,7 @@ active_border_color = "#adadad"
 active_tab_background = "#727272"
 
 # Cursor colors
-cursor = "#ffffff"
+cursor = "#cc4444"
 
 # Primary colors
 foreground = "#ffffff"

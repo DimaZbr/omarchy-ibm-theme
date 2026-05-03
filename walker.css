@@ -1,14 +1,49 @@
-@define-color selected-text #727272;
+@define-color selected-text #8683b5;
 @define-color text #ffffff;
 @define-color base #050709;
 @define-color border #4a4a4a;
 @define-color foreground #ffffff;
 @define-color background #050709;
 
-.box-wrapper {
-    border-radius: 30px;
+/* Search */
+window .search-container,
+window .search {
+    background: alpha(@hover, 0.35);
+    color: @foreground;
+    border-radius: 10px;
 }
 
-.search-container {
+/* Main container */
+.box-wrapper {
     border-radius: 12px;
+    background: @background;
+}
+
+/* Item base */
+child {
+    border-radius: 10px;
+    padding: 2px 6px;
+    transition:
+        background-color 0.18s ease-out,
+        margin 0.18s ease-out;
+}
+
+/* Hover */
+child:hover {
+    background-color: alpha(@hover, 0.25);
+}
+
+/* Selected item */
+child:selected {
+    background-color: alpha(@selected-box, 0.45);
+    transition: background-color 0.22s ease-out;
+}
+
+child:selected .item-box {
+    margin-left: 6px;
+    transition: margin 0.18s ease-out;
+}
+
+child:selected .item-box * {
+    color: @text;
 }
